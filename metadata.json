@@ -1,0 +1,6 @@
+{
+  "name": "HelixVault",
+  "description": "Enterprise SaaS DNA Data Storage, archive management, retrieval simulation, and provider abstraction middleware.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
