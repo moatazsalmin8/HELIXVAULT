@@ -1,0 +1,27 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 20
+    commands:
+      - echo Installing dependencies...
+      - npm ci --legacy-peer-deps
+
+  build:
+    commands:
+      - echo Building client and server...
+      - npm run build
+      - npm prune --production
+
+cache:
+  paths:
+    - 'node_modules/**/*'
+
+artifacts:
+  files:
+    - 'dist/**/*'
+    - 'package.json'
+    - 'package-lock.json'
+    - 'node_modules/**/*'
+  discard-paths: no
